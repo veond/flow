@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+<mapper namespace="organization">
+
+  <!-- role -->
+  <resultMap id="RoleMapper" type="com.zxw.organization.model.Role">
+    <result property="updateAt" column="update_at"/>
+    <result property="createAt" column="create_at"/>
+  </resultMap>
+  <resultMap id="RoleTreeMapper" type="com.zxw.system.extjs.TreePanel">
+    <result property="text" column="name"/>
+  </resultMap>
+  
+  <!-- user -->
+  <resultMap id="UserMapper" type="com.zxw.organization.model.User">
+    <result property="deptId" column="dept_id"/>
+    <result property="roleId" column="role_id"/>
+  </resultMap>
+  <resultMap id="UserAllotTree" type="com.zxw.organization.model.tree.UserAllotTree">
+    <result property="roleId" column="role_id"/>
+    <result property="text" column="username"/>
+  </resultMap>
+
+	
+	
+</mapper>
+

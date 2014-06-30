@@ -1,0 +1,23 @@
+[
+	{
+	"text":"械地方官","cls":"folder",
+	"expanded":false,"leaf":false,
+	"children":[{
+			"text":"塔顶 ",
+			"cls":"folder",
+			"expanded":false,
+			"leaf":true,
+			"children":null
+		}]		
+	},{
+	"text":"二部门","cls":"folder",
+	"expanded":false,"leaf":false,
+	"children":[{
+			"text":"部门二二",
+			"cls":"folder",
+			"expanded":false,
+			"leaf":true,
+			"children":null
+		}]
+	}
+]

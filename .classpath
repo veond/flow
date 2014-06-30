@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="com/zxw/flow/mapper/" kind="src" path="web/WEB-INF/src"/>
+	<classpathentry kind="src" output="work" path="work"/>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="src" path="util"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/spring-beans-3.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/spring-core-3.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/spring-context-3.2.2.RELEASE.jar" sourcepath="E:/jar/spring-framework-3.2.2.RELEASE/libs/spring-context-3.2.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/commons-logging-1.1.2.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/spring-expression-3.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/spring-web-3.2.2.RELEASE.jar" sourcepath="E:/jar/spring-framework-3.2.2.RELEASE/libs/spring-web-3.2.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/spring-webmvc-3.2.2.RELEASE.jar" sourcepath="E:/jar/spring-framework-3.2.2.RELEASE/libs/spring-webmvc-3.2.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/mybatis-3.2.2.jar" sourcepath="E:/jar/mybatis-3.2.2/source"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/mysql-connector-java-5.1.14.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/spring-orm-3.2.2.RELEASE.jar" sourcepath="E:/jar/spring-framework-3.2.2.RELEASE/libs/spring-orm-3.2.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/spring-tx-3.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/mybatis-spring-1.2.0.jar" sourcepath="E:/jar/mybatis-spring-1.2.0/mybatis-spring-1.2.0-sources.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/spring-jdbc-3.2.2.RELEASE.jar" sourcepath="E:/jar/spring-framework-3.2.2.RELEASE/libs/spring-jdbc-3.2.2.RELEASE-sources.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/spring-aop-3.2.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="web/WEB-INF/lib/jackson-all-1.9.11.jar" sourcepath="E:/jar/jakarta-taglibs-standard-1.1.2/javadoc/resources"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/servlet-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/jasper.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/jsp-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/el-api.jar"/>
+	<classpathentry kind="var" path="TOMCAT_HOME/lib/annotations-api.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="output" path="web/WEB-INF/classes"/>
+</classpath>

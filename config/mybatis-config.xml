@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+
+  
+<configuration>
+
+	<mappers>
+		<mapper resource="mybatis/mapping/PublicMapper.xml"/>
+		<mapper resource="mybatis/mapping/OrganizationMapper.xml"/>
+		<mapper resource="mybatis/mapping/WorkMapper.xml"/>
+		
+		<package name="com.zxw.organization.mapper"/>
+		<package name="com.zxw.work.engine.mapper"/>
+		<package name="com.zxw.work.business.mapper"/>
+	</mappers>
+</configuration>

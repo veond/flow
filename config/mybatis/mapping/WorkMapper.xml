@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+<mapper namespace="work">
+
+  <!-- leave -->
+  <resultMap id="LeaveMapper" type="com.zxw.work.business.model.Leave" extends="public.BaseModel">
+    <result property="startDate" column="start_date"/>
+    <result property="endDate" column="end_date"/>
+    <result property="leaveDay" column="leave_day"/>
+    <result property="leaveUserId" column="leave_user_id"/>
+    <result property="leaveUserName" column="leave_user_name"/>
+    <result property="processInstance" column="process_instance"/>
+  </resultMap>
+  
+  
+  <resultMap id="ItemMapper" type="com.zxw.work.engine.model.WorkItem" extends="public.BaseModel">
+    <result property="workModelId" column="work_model_id"/>
+    <result property="itemType" column="item_type"/>
+    <result property="itemCondition" column="item_condition"/>
+    <result property="partakeUser" column="partake_user"/>
+  </resultMap>
+  
+	
+</mapper>
+

@@ -1,0 +1,74 @@
+项目笔记：
+
+1、项目：
+	- 如果要配制log4j  只要在   /WEB-INF/classes/ 目录下加上log4j.properties 文件就可以了。 
+	- ??? 这个标记的地方表示自己也不明白！
+	- 项目中通过 SQLReverse 去生成简单的SQL　增\删\改\查  省去自己拼写SQL时的名称或是语法上的错误 (字段名和model里面的成员名，必须如：（user_name  --->  userName）)
+	- 为了方便简单SQL语句的反转，在model里面如果变量不与数据库字段对应的， 在变量名后面加上 "_"
+	
+
+
+2、项目配制
+	- workModelIdConfig.properties   里面配制每个工作模型的ID , 如：请假模型的ID ...
+
+
+
+
+2、spring
+	- spring mvc  自动将对象转在 json 需要加上下面配制:
+					<!-- 配制spring mvc 返回 对象时，自动转成json  -->
+				    <bean id="mappingJacksonHttpMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">  
+				        <property name="supportedMediaTypes">  
+				            <list>  
+				                <value>text/html;charset=UTF-8</value>  
+				            </list>  
+				        </property>  
+				    </bean>  
+				    <!-- 启动Spring MVC的注解功能，完成请求和注解POJO的映射 -->  
+				    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">  
+				        <property name="messageConverters">  
+				            <list>  
+				                <ref bean="mappingJacksonHttpMessageConverter" /><!-- json转换器 -->  
+				            </list>  
+				        </property>  
+				    </bean>  
+				    
+*	- spring mvc （415错误原因）  如果需要影响json格式的话，  需要在mvc配制里面加上 <value>application/json; charset=utf-8</value>  这个值 
+*	- spring mvc （400错误原因）  @RequestBody 需要接受一串json字符串，而不是json对象。 在客户端ajax请求JSON.stringify(data) 是将json对象，转成字符串。    注：  JSON.stringify方法是浏览器自带的
+
+
+
+3、mybatis   (详细配制说明详情请见： RoleMapper.java)   或： http://www.cnblogs.com/ibook360/archive/2012/07/16/2594056.html
+	1、 SqlSessionFactory.openSession() 方法，不会自动关闭数据库连接， （2013-4-18 修改为自动注入SQLSession）
+	2、使用注解形式的SQL语句，只要在 mybatis-config.xml 里面配制出 mapper 的包位置即可！， 如下：
+			<mappers><package name="com.zxw.organization.mapper"/> </mappers>
+	3、@Param 注解SQL里面要的参数， 在多个参数的情况下需要使用此注解,不然SQL中无法获取, (使用此注解后在SQL中可以通过别名来访问此参数)		
+	4、@Results 注解SQL字段与model字段的对应  （@ResultMap,  @Result  都一样的）
+			@Results(value = {
+				@Result(id=true, property="optionValue", column = "id", javaType=String.class, jdbcType=JdbcType.VARCHAR),
+				@Result(property="optionName", column="name", javaType=String.class, jdbcType=JdbcType.VARCHAR) })
+
+	5、
+	 
+
+
+4、extjs:
+	- extjs 中总的控制js由App.js 控制的
+	- App.js 就想当于 extjs 页面中，总窗口。 (类似于windows的桌面)
+	- 在extjs中， 每个窗口都是一个module （组件） ，需要自己加窗口时， 加一个module js 然后在app里面，引用出来就可以了     (详细module实现，可见 Department.js)
+	- 在extjs中， store 其实简单的理解就是数据源， 它主要用来获得数据 ， 可以 后台异步请求过来的也可以是 ， 自己手工拼成的
+	- 在extjs中，全局变量作用域在一个页面上是通用的
+	
+	
+	
+5、java ：
+	- 在对list  进行remove 操作时，只适合操作一次， 否则会报列表不安全错误！   
+
+
+
+
+
+
+
+
+
